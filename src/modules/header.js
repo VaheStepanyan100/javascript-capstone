@@ -1,4 +1,4 @@
-import logo from '../assets/images/Movies-logo.svg';
+import logo from '../assets/images/logo.svg';
 
 const header = document.querySelector('header');
 const headerFunc = () => {
