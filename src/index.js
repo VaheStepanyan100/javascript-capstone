@@ -1,4 +1,4 @@
 import './style.css';
-import { headerFunc } from "./modules/header";
+import headerFunc from './modules/header.js';
 
 headerFunc();

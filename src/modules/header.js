@@ -1,7 +1,7 @@
-import logo from "../assets/images/Movies-logo.svg";
+import logo from '../assets/images/Movies-logo.svg';
 
 const header = document.querySelector('header');
-export const headerFunc = () => {
+const headerFunc = () => {
   const mainContainer = document.createElement('div');
   mainContainer.classList.add('headerContainer');
   header.appendChild(mainContainer);
@@ -25,6 +25,6 @@ export const headerFunc = () => {
   navUl.appendChild(li3);
   navigationContainer.appendChild(navUl);
   mainContainer.appendChild(navigationContainer);
-}
+};
 
-
+export default headerFunc;
