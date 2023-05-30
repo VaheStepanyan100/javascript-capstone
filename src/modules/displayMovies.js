@@ -1,3 +1,4 @@
+import commentPopup from './commentPopup.js';
 import { getLikesCount } from './likesCount.js';
 
 const moviesURL = 'https://api.tvmaze.com/shows';
@@ -15,10 +16,17 @@ const getAllMovies = async () => {
     movieImage.height = 250;
     const movieTitle = movieElement.querySelector('.movieTitle');
     movieTitle.innerHTML = movie.name;
+    const commentBtn = movieElement.querySelector('button');
+    commentBtn.setAttribute('id', movie.id);
     const movieLikes = movieElement.querySelector('.likeNo');
     movieLikes.setAttribute('id', `${movie.id}`);
     movieSection.appendChild(movieElement);
+    movieSection.appendChild(movieElement);
   });
+  const commentButtons = document.querySelectorAll('.commentBtn');
+  commentButtons.forEach((btn) => btn.addEventListener('click', (e) => {
+    commentPopup(e.target.id);
+  }));
 
   const updateLikesCount = async () => {
     const likesData = await getLikesCount();

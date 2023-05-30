@@ -9,6 +9,7 @@ const headerFunc = () => {
   const logoImage = document.createElement('img');
   logoImage.src = logo;
   logoImage.width = 200;
+  logoImage.height = 30;
   mainContainer.appendChild(logoImage);
 
   const navigationContainer = document.createElement('div');
