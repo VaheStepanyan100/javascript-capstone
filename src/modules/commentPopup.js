@@ -1,4 +1,5 @@
 import displayComment from './displayComment.js';
+
 const moviesURL = 'https://api.tvmaze.com/shows';
 const body = document.querySelector('body');
 const commentSection = document.createElement('section');
