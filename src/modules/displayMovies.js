@@ -1,4 +1,4 @@
-import { getLikesCount } from './likesCount';
+import { getLikesCount } from './likesCount.js';
 
 const moviesURL = 'https://api.tvmaze.com/shows';
 const movieTemplate = document.getElementById('movie-template');

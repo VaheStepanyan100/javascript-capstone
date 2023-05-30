@@ -1,5 +1,4 @@
-const likesApi =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/likes';
+const likesApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/likes';
 
 const postLikes = async (id) => {
   const test = { item_id: id };
