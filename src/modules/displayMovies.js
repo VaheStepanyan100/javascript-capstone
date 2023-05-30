@@ -18,16 +18,15 @@ const getAllMovies = async () => {
     movieTitle.innerHTML = movie.name;
     const commentBtn = movieElement.querySelector('button');
     commentBtn.setAttribute('id', movie.id);
+    const movieLikes = movieElement.querySelector('.likeNo');
+    movieLikes.setAttribute('id', `${movie.id}`);
+    movieSection.appendChild(movieElement);
     movieSection.appendChild(movieElement);
   });
   const commentButtons = document.querySelectorAll('.commentBtn');
   commentButtons.forEach((btn) => btn.addEventListener('click', (e) => {
     commentPopup(e.target.id);
   }));
-    const movieLikes = movieElement.querySelector('.likeNo');
-    movieLikes.setAttribute('id', `${movie.id}`);
-    movieSection.appendChild(movieElement);
-  });
 
   const updateLikesCount = async () => {
     const likesData = await getLikesCount();
