@@ -6,29 +6,30 @@
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: #4ac5f2;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #ffd23f;
 }
 
 header {
-  background-color: #fdfffc;
+  background-color: #393e41;
 }
 
 .headerContainer {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0.5em 2em;
   align-items: center;
 }
 
 .nav {
   display: flex;
   gap: 2em;
+  padding-right: 2em;
 }
 
 .nav li {
   font-weight: 700;
-  color: #011627;
+  color: #ffd23f;
   cursor: pointer;
 }
 
@@ -36,16 +37,43 @@ header {
   text-decoration: underline;
 }
 
-footer {
-  background-color: #fdfffc;
+.movieSection {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  justify-content: center;
+}
+
+.movieInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+.commentBtn {
+  width: 70%;
   padding: 0.25em;
-  position: absolute;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #393e41;
+  padding: 0.25em;
+  position: fixed;
   bottom: 0;
+  z-index: 10;
   width: 100%;
 }
 
 footer p {
   font-weight: 600;
-  color: #011627;
+  color: #ffd23f;
   padding-left: 2em;
 }
