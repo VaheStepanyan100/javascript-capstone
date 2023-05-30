@@ -1,5 +1,6 @@
+import displayComment from './displayComment.js';
+
 const moviesURL = 'https://api.tvmaze.com/shows';
-// const commentPopupTemplate = document.getElementById('commentPopup-template');
 const body = document.querySelector('body');
 const commentSection = document.createElement('section');
 commentSection.classList.add('commentSection');
@@ -22,12 +23,17 @@ const commentPopup = async (id) => {
             <li><span>Rating:</span> ${data.rating.average}</li>
             <li><span>Runtime:</span> ${data.averageRuntime}</li>
           </ul>
+          <div class='commentContainer'>
+            <h3 class='commentTitle'>Comments</h3>
+            <div class='commentList'></div>
+          </div>
         </div>
       </div>
     </div>
   `;
   commentSection.innerHTML = commentContent;
   body.appendChild(commentSection);
+  displayComment(id);
 
   const closeBtn = document.getElementById('closeBtn');
   closeBtn.addEventListener('click', () => {
