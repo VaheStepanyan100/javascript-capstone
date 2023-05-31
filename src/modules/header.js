@@ -18,9 +18,9 @@ const headerFunc = () => {
   const li1 = document.createElement('li');
   const li2 = document.createElement('li');
   const li3 = document.createElement('li');
-  li1.innerHTML = 'Total Movies';
-  li2.innerHTML = 'Genre';
-  li3.innerHTML = 'Rating';
+  li1.classList.add('movieCounter');
+  li2.textContent = 'Genre';
+  li3.textContent = 'Rating';
   navUl.appendChild(li1);
   navUl.appendChild(li2);
   navUl.appendChild(li3);
