@@ -1,4 +1,5 @@
 import displayComment from './displayComment.js';
+import addComment from './addComment.js';
 
 const moviesURL = 'https://api.tvmaze.com/shows';
 const body = document.querySelector('body');
@@ -42,6 +43,12 @@ const commentPopup = async (id) => {
   commentSection.innerHTML = commentContent;
   body.appendChild(commentSection);
   displayComment(id);
+
+  const commentForm = document.querySelector('.commentForm');
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addComment(e.target.id);
+  });
 
   const closeBtn = document.getElementById('closeBtn');
   closeBtn.addEventListener('click', () => {
