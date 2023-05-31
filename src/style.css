@@ -117,7 +117,7 @@ footer p {
   font-family: sans-serif;
   font-size: 2rem;
   position: absolute;
-  top: 2.5%;
+  top: 1%;
   right: 5%;
   cursor: pointer;
   transition: 0.1s;
@@ -156,7 +156,9 @@ footer p {
 
 .commentContainer {
   margin-top: 0.5em;
-  background-color: #fff;
+  background-color: #f7f7f7;
+  border-radius: 0.35em;
+  padding: 0.35em;
 }
 
 .commentTitle {
@@ -166,4 +168,46 @@ footer p {
 
 .commentList {
   line-height: 1.5em;
+}
+
+.AddComment {
+  background-color: #f7f7f7;
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  padding: 0.35em;
+  border-radius: 0.35em;
+}
+
+.AddComment h4 {
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  align-items: center;
+}
+
+.formControl {
+  width: 80%;
+  border: 0.5px solid #e9e7ce;
+  padding: 0.25em 0.6em;
+  border-radius: 0.25em;
+  outline-color: #e9e7ce;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.addComtBtn {
+  padding: 0.05em 0.5em;
+  transition: 0.1s;
+  background-color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+.addComtBtn:hover {
+  transform: scale(1.03);
 }

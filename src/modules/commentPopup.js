@@ -1,4 +1,5 @@
 import displayComment from './displayComment.js';
+import addComment from './addComment.js';
 
 const moviesURL = 'https://api.tvmaze.com/shows';
 const body = document.querySelector('body');
@@ -27,6 +28,14 @@ const commentPopup = async (id) => {
             <h3 class='commentTitle'>Comments</h3>
             <div class='commentList'></div>
           </div>
+          <div class="AddComment">
+              <h4>Add a comment</h4>
+              <form id="${id}" class="commentForm">
+                  <input type="text" class="formControl" id="username" placeholder="Your name.." required>
+                  <textarea name="comment" class="formControl" id="comment" rows="5" placeholder="Your insights.." required></textarea>
+                  <button class="addComtBtn">Add Comment</button>
+              </form>
+            </div>
         </div>
       </div>
     </div>
@@ -34,6 +43,12 @@ const commentPopup = async (id) => {
   commentSection.innerHTML = commentContent;
   body.appendChild(commentSection);
   displayComment(id);
+
+  const commentForm = document.querySelector('.commentForm');
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addComment(e.target.id);
+  });
 
   const closeBtn = document.getElementById('closeBtn');
   closeBtn.addEventListener('click', () => {
