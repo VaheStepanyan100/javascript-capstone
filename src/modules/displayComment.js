@@ -1,3 +1,5 @@
+import commentCounter from './commentCounter.js';
+
 const getComment = async (id) => {
   const commentApi = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/comments?item_id=item${id}`;
   const response = await fetch(commentApi);
@@ -18,6 +20,14 @@ const displayComment = async (id) => {
         </li>
         `;
     }
+  }
+  const commentTitle = document.querySelector('.commentTitle');
+  const showComment = document.querySelectorAll('.show-comment');
+  const count = commentCounter(showComment);
+  if (count > 0) {
+    commentTitle.innerHTML = `Comment (${count})`;
+  } else {
+    commentTitle.innerHTML = 'No Comments...';
   }
 };
 
