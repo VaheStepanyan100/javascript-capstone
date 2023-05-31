@@ -50,6 +50,10 @@ header {
   justify-content: space-between;
 }
 
+.likes {
+  cursor: pointer;
+}
+
 .btnContainer {
   display: flex;
   justify-content: center;
@@ -129,8 +133,6 @@ footer p {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  /* border: 3px solid #d84c0bb7; */
 }
 
 .popupBody .movieCover {
@@ -152,6 +154,16 @@ footer p {
   font-weight: bold;
 }
 
-.likes {
-  cursor: pointer;
+.commentContainer {
+  margin-top: 0.5em;
+  background-color: #fff;
+}
+
+.commentTitle {
+  padding-bottom: 0.15em;
+  font-style: italic;
+}
+
+.commentList {
+  line-height: 1.5em;
 }
