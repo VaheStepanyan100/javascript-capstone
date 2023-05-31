@@ -27,6 +27,14 @@ const commentPopup = async (id) => {
             <h3 class='commentTitle'>Comments</h3>
             <div class='commentList'></div>
           </div>
+          <div class="AddComment">
+              <h4>Add a comment</h4>
+              <form id="${id}" class="commentForm">
+                  <input type="text" class="formControl" id="username" placeholder="Your name.." required>
+                  <textarea name="comment" class="formControl" id="comment" rows="5" placeholder="Your insights.." required></textarea>
+                  <button class="addComtBtn">Add Comment</button>
+              </form>
+            </div>
         </div>
       </div>
     </div>
