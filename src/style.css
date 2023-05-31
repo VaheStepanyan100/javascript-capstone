@@ -50,6 +50,10 @@ header {
   justify-content: space-between;
 }
 
+.likes {
+  cursor: pointer;
+}
+
 .btnContainer {
   display: flex;
   justify-content: center;

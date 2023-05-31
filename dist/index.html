@@ -7,11 +7,31 @@
     <title>Movies</title>
   <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
   <body>
-    <header>
-      
-    </header>
+    <header></header>
+    <section class="movieSection"></section>
     <footer>
       <p>Created by Aklilu & Vahe</p>
     </footer>
+    <template id="movie-template">
+      <div class="movieContainer">
+        <div class="imgContainer">
+          <img src="" alt="movie image" class="movieCover" />
+        </div>
+        <div class="movieInfo">
+          <h3 class="movieTitle"></h3>
+          <div class="likes">
+            <i class="fa-regular fa-thumbs-up"></i>
+            <span class="likeNo"></span>
+          </div>
+        </div>
+        <div class="btnContainer">
+          <button class="commentBtn">Comment</button>
+        </div>
+      </div>
+    </template>
+    <script
+      src="https://kit.fontawesome.com/e88675a3bd.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
