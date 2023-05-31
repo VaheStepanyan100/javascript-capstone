@@ -29,11 +29,9 @@ const getAllMovies = async () => {
     movieSection.appendChild(movieElement);
   });
   const commentButtons = document.querySelectorAll('.commentBtn');
-  commentButtons.forEach((btn) =>
-    btn.addEventListener('click', (e) => {
-      commentPopup(e.target.id);
-    })
-  );
+  commentButtons.forEach((btn) => btn.addEventListener('click', (e) => {
+    commentPopup(e.target.id);
+  }));
 
   const updateLikesCount = async () => {
     const likesData = await getLikesCount();
