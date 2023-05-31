@@ -1,5 +1,5 @@
 import commentPopup from './commentPopup.js';
-import { getLikesCount } from './likesCount.js';
+import { getLikesCount, postLikes } from './likesCount.js';
 
 const moviesURL = 'https://api.tvmaze.com/shows';
 const movieTemplate = document.getElementById('movie-template');
@@ -20,7 +20,8 @@ const getAllMovies = async () => {
     commentBtn.setAttribute('id', movie.id);
     const movieLikes = movieElement.querySelector('.likeNo');
     movieLikes.setAttribute('id', `${movie.id}`);
-    movieSection.appendChild(movieElement);
+    const likeBtn = movieElement.querySelector('.fa-regular');
+    likeBtn.setAttribute('id', `${movie.id}`);
     movieSection.appendChild(movieElement);
   });
   const commentButtons = document.querySelectorAll('.commentBtn');
@@ -33,10 +34,21 @@ const getAllMovies = async () => {
     likesData.forEach((item) => {
       const likesCount = item.likes;
       const likesCountElement = document.getElementById(`${item.item_id}`);
-      likesCountElement.innerHTML = likesCount;
+      likesCountElement.innerHTML = ` ${likesCount}`;
     });
   };
   updateLikesCount();
+
+  const likeBtn = document.querySelectorAll('.likeButton');
+  likeBtn.forEach((button) => {
+    button.addEventListener('click', async (item) => {
+      if (item.target.classList.contains('likeButton')) {
+        const { id } = item.target;
+        await postLikes(id);
+        updateLikesCount();
+      }
+    });
+  });
 };
 
 export default getAllMovies;
