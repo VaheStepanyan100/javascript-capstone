@@ -40,7 +40,7 @@ This web app was built with:
 
 ## Live Demo 💻
 
-Coming soon.
+- [Live-Demo] https://vahestepanyan100.github.io/javascript-capstone/dist/
 
 ## Video Walkthrough 📹🚶
 
