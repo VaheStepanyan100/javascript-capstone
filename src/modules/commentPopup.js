@@ -25,7 +25,7 @@ const commentPopup = async (id) => {
             <li><span>Runtime:</span> ${data.averageRuntime}</li>
           </ul>
           <div class='commentContainer'>
-            <h3 class='commentTitle'>Comments</h3>
+            <h3 class='commentTitle'></h3>
             <div class='commentList'></div>
           </div>
           <div class="AddComment">
