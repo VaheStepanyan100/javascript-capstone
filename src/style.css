@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #ffd23f;
+}
+
+header {
+  background-color: #393e41;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 2em;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 2em;
+  padding-right: 2em;
+}
+
+.nav li {
+  font-weight: 700;
+  color: #ffd23f;
+  cursor: pointer;
+}
+
+.nav li:first-child {
+  text-decoration: underline;
+}
+
+.movieSection {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  justify-content: center;
+}
+
+.movieInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.likes {
+  cursor: pointer;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+.commentBtn {
+  width: 70%;
+  padding: 0.25em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #393e41;
+  padding: 0.25em;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+footer p {
+  font-weight: 600;
+  color: #ffd23f;
+  padding-left: 2em;
+}
+
+/* Style for Comment popup */
+.popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  overflow: auto;
+  background-color: #ffd23fb7;
+}
+
+.commentPopup {
+  background: #e9e7ce;
+  width: 50%;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 2%);
+  z-index: 2;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .popupHeader {
+  position: relative;
+} */
+
+#closeBtn {
+  font-family: sans-serif;
+  font-size: 2rem;
+  position: absolute;
+  top: 1%;
+  right: 5%;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#closeBtn:hover {
+  scale: 1.3;
+  font-weight: 700;
+}
+
+.popupBody {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.popupBody .movieCover {
+  width: 330px;
+}
+
+.popupBody .movieTitle {
+  text-align: center;
+  padding: 0.25em;
+}
+
+.movieDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.25em;
+}
+
+.movieDetails span {
+  font-weight: bold;
+}
+
+.commentContainer {
+  margin-top: 0.5em;
+  background-color: #f7f7f7;
+  border-radius: 0.35em;
+  padding: 0.35em;
+}
+
+.commentTitle {
+  padding-bottom: 0.15em;
+  font-style: italic;
+}
+
+.commentList {
+  line-height: 1.5em;
+}
+
+.AddComment {
+  background-color: #f7f7f7;
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  padding: 0.35em;
+  border-radius: 0.35em;
+}
+
+.AddComment h4 {
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  align-items: center;
+}
+
+.formControl {
+  width: 80%;
+  border: 0.5px solid #e9e7ce;
+  padding: 0.25em 0.6em;
+  border-radius: 0.25em;
+  outline-color: #e9e7ce;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.addComtBtn {
+  padding: 0.05em 0.5em;
+  transition: 0.1s;
+  background-color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+.addComtBtn:hover {
+  transform: scale(1.03);
+}
