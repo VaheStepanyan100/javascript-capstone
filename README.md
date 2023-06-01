@@ -44,7 +44,7 @@ This web app was built with:
 
 ## Video Walkthrough 📹🚶
 
-Coming soon.
+- [Video-Walkthrough] https://drive.google.com/file/d/1g-hOXgTrNV2rWi0W9lX415SAbTfPr-R3/view?usp=share_link
 
 ## Getting Started 🏁
 
